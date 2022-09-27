@@ -9,7 +9,10 @@ class Splash extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Stack(
-      children: const [WhiteBack(), Center()],
+      children: [
+        const WhiteBack(),
+        Center(child: Image.asset('assets/image/logo.jpeg'))
+      ],
     ));
   }
 }
