@@ -11,7 +11,7 @@ class Splash extends StatelessWidget {
         body: Stack(
       children: [
         const WhiteBack(),
-        Center(child: Image.asset('assets/image/logo.jpeg'))
+        Center(child: Image.asset('assets/images/logo.jpeg'))
       ],
     ));
   }
