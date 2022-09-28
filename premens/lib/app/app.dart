@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:premens/screens/splash.dart';
+import 'package:premens/screens/auth.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -12,7 +13,10 @@ class App extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      routes: {'/splash': (context) => const Splash()},
+      routes: {
+        '/splash': (context) => const Splash(),
+        '/auth': (context) => const Auth()
+      },
       initialRoute: '/splash',
     );
   }
