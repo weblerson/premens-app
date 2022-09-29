@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 import 'package:premens/components/general/white_back.dart';
 import 'package:premens/components/general/vertical_padding.dart';
-import 'package:premens/components/auth/user_input.dart';
-import 'package:premens/components/auth/pass_input.dart';
-import 'package:premens/components/auth/submit_button.dart';
-import 'package:premens/components/auth/register_hyperlink.dart';
 
-class Auth extends StatelessWidget {
-  const Auth({super.key});
+import 'package:premens/components/register/user_input.dart';
+import 'package:premens/components/register/pass_input.dart';
+import 'package:premens/components/register/submit_button.dart';
+
+class Register extends StatelessWidget {
+  const Register({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,11 +28,9 @@ class Auth extends StatelessWidget {
             const VerticalPadding(height: 20.0),
             const Center(child: UserInput()),
             const VerticalPadding(height: 20.0),
-            const Center(child: PasswordInput()),
+            const Center(child: PassInput()),
             const VerticalPadding(height: 20.0),
-            const Center(child: SubmitButton()),
-            const VerticalPadding(height: 20.0),
-            const Center(child: RegisterHyperlink())
+            const Center(child: SubmitButton())
           ],
         )
       ],

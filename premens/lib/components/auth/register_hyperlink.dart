@@ -15,7 +15,7 @@ class RegisterHyperlink extends StatelessWidget {
               style: TextStyle(
                   color: Colors.blue, decoration: TextDecoration.underline),
               'Clique aqui!'),
-          onTap: () => 1,
+          onTap: () => Navigator.of(context).pushNamed('/register'),
         )
       ],
     );

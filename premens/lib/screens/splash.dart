@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:premens/components/white_back.dart';
+import 'package:premens/components/general/white_back.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});

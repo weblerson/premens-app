@@ -35,6 +35,8 @@ class SubmitButton extends StatelessWidget {
 
               if (passSnapshot.exists) {
                 // Passar para a tela de monitoramento
+
+                return;
               }
 
               const snackBar = SnackBar(
