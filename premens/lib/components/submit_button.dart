@@ -35,24 +35,22 @@ class SubmitButton extends StatelessWidget {
 
               if (passSnapshot.exists) {
                 // Passar para a tela de monitoramento
-              } else {
-                const snackBar = SnackBar(
-                  content: Text('Senha incorreta!'),
-                );
-                // ignore: use_build_context_synchronously
-                ScaffoldMessenger.of(context).showSnackBar(snackBar);
-
-                return;
               }
-            } else {
+
               const snackBar = SnackBar(
-                content: Text('Usuário inexistente!'),
+                content: Text('Senha incorreta!'),
               );
               // ignore: use_build_context_synchronously
               ScaffoldMessenger.of(context).showSnackBar(snackBar);
 
               return;
             }
+
+            const snackBar = SnackBar(
+              content: Text('Usuário inexistente!'),
+            );
+            // ignore: use_build_context_synchronously
+            ScaffoldMessenger.of(context).showSnackBar(snackBar);
           },
           child: const Text('Entrar')),
     );
