@@ -18,12 +18,18 @@ class Auth extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Center(child: UserInput()),
-            VerticalPadding(height: 20.0),
-            Center(child: PasswordInput()),
-            VerticalPadding(height: 20.0),
-            Center(child: SubmitButton())
+          children: [
+            Center(
+                child: SizedBox(
+                    width: 250.0,
+                    height: 250.0,
+                    child: Image.asset('assets/images/logo_auth.jpeg'))),
+            const VerticalPadding(height: 20.0),
+            const Center(child: UserInput()),
+            const VerticalPadding(height: 20.0),
+            const Center(child: PasswordInput()),
+            const VerticalPadding(height: 20.0),
+            const Center(child: SubmitButton())
           ],
         )
       ],
