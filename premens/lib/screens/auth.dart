@@ -5,6 +5,7 @@ import 'package:premens/components/vertical_padding.dart';
 import 'package:premens/components/user_input.dart';
 import 'package:premens/components/pass_input.dart';
 import 'package:premens/components/submit_button.dart';
+import 'package:premens/components/register_hyperlink.dart';
 
 class Auth extends StatelessWidget {
   const Auth({super.key});
@@ -29,7 +30,9 @@ class Auth extends StatelessWidget {
             const VerticalPadding(height: 20.0),
             const Center(child: PasswordInput()),
             const VerticalPadding(height: 20.0),
-            const Center(child: SubmitButton())
+            const Center(child: SubmitButton()),
+            const VerticalPadding(height: 20.0),
+            const Center(child: RegisterHyperlink())
           ],
         )
       ],
