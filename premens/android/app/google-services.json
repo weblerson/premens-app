@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "517866791350",
+    "firebase_url": "https://premens-default-rtdb.firebaseio.com",
+    "project_id": "premens",
+    "storage_bucket": "premens.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:517866791350:android:e52d8e2657f6a65838a117",
+        "android_client_info": {
+          "package_name": "com.example.premens"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "517866791350-42vt1iv9sadpfqavi7i21fdn7ptjj16q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWbZKE1-EktRKfSa_7z-atya46evNo1xo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "517866791350-42vt1iv9sadpfqavi7i21fdn7ptjj16q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:517866791350:android:dd1817597abedec738a117",
+        "android_client_info": {
+          "package_name": "com.lerson.premens"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "517866791350-42vt1iv9sadpfqavi7i21fdn7ptjj16q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWbZKE1-EktRKfSa_7z-atya46evNo1xo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "517866791350-42vt1iv9sadpfqavi7i21fdn7ptjj16q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

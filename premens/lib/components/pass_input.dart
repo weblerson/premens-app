@@ -7,14 +7,16 @@ class PasswordInput extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      decoration: const InputDecoration(
-          border: UnderlineInputBorder(), labelText: 'Senha:'),
-      onChanged: (String text) {
-        if (text.isNotEmpty) {
+    return SizedBox(
+      width: 300.0,
+      child: TextField(
+        decoration: const InputDecoration(
+            border: UnderlineInputBorder(), labelText: 'Senha'),
+        onChanged: (String text) {
           UserData.instance.password = text;
-        }
-      },
+        },
+        obscureText: true,
+      ),
     );
   }
 }

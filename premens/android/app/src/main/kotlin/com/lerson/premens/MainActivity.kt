@@ -1,4 +1,4 @@
-package com.example.premens
+package com.lerson.premens
 
 import io.flutter.embedding.android.FlutterActivity
 

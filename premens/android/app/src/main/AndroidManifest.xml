@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.premens">
+    package="com.lerson.premens">
    <application
         android:label="premens"
         android:name="${applicationName}"

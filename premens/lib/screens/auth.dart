@@ -4,6 +4,7 @@ import 'package:premens/components/white_back.dart';
 import 'package:premens/components/vertical_padding.dart';
 import 'package:premens/components/user_input.dart';
 import 'package:premens/components/pass_input.dart';
+import 'package:premens/components/submit_button.dart';
 
 class Auth extends StatelessWidget {
   const Auth({super.key});
@@ -18,9 +19,11 @@ class Auth extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
-            UserInput(),
+            Center(child: UserInput()),
             VerticalPadding(height: 20.0),
-            PasswordInput()
+            Center(child: PasswordInput()),
+            VerticalPadding(height: 20.0),
+            Center(child: SubmitButton())
           ],
         )
       ],
