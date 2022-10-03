@@ -34,7 +34,9 @@ class SubmitButton extends StatelessWidget {
                   .get();
 
               if (passSnapshot.exists) {
-                // Passar para a tela de monitoramento
+                // Passar para o menu
+                // ignore: use_build_context_synchronously
+                Navigator.of(context).pushReplacementNamed('/menu');
 
                 return;
               }
