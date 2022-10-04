@@ -4,6 +4,7 @@ import 'package:premens/screens/splash.dart';
 import 'package:premens/screens/auth.dart';
 import 'package:premens/screens/register.dart';
 import 'package:premens/screens/menu.dart';
+import 'package:premens/screens/data_screen.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -19,7 +20,8 @@ class App extends StatelessWidget {
         '/splash': (context) => const Splash(),
         '/auth': (context) => const Auth(),
         '/register': (context) => const Register(),
-        '/menu': (context) => const Menu()
+        '/menu': (context) => const Menu(),
+        '/datascreen': (context) => const DataScreen()
       },
       initialRoute: '/splash',
     );
