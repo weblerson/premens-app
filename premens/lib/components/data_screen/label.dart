@@ -45,7 +45,7 @@ class _DataLabelState extends State<DataLabel> {
                 style:
                     TextStyle(color: const Color(0xFF15566A).withOpacity(0.8)),
               ),
-              Text(value as String,
+              Text(value,
                   style: TextStyle(
                       color: const Color(0xFF15566A).withOpacity(0.8)))
             ],

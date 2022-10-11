@@ -23,7 +23,7 @@ class App extends StatelessWidget {
         '/menu': (context) => const Menu(),
         '/datascreen': (context) => const DataScreen()
       },
-      initialRoute: '/datascreen',
+      initialRoute: '/menu',
     );
   }
 }

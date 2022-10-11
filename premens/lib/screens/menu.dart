@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:premens/components/general/white_back.dart';
+import 'package:premens/components/menu/menu_bg.dart';
 import 'package:premens/components/menu/options.dart';
 
 class Menu extends StatelessWidget {
@@ -10,7 +10,7 @@ class Menu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Stack(
-      children: const [WhiteBack(), Center(child: Options())],
+      children: const [MenuBG(), Center(child: Options())],
     ));
   }
 }
