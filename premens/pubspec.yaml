@@ -38,6 +38,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   firebase_core: ^1.23.0
   firebase_database: ^9.1.5
+  http: ^0.13.5
 
 dev_dependencies:
   flutter_test:
@@ -65,6 +66,7 @@ flutter:
   assets:
     - assets/images/logo.jpeg
     - assets/images/logo_auth.jpeg
+    - assets/images/prensa_dados.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

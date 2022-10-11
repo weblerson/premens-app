@@ -12,7 +12,9 @@ class DataButton extends StatelessWidget {
               backgroundColor: Colors.blueAccent,
               elevation: 10.0,
               side: const BorderSide(color: Colors.cyan)),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).pushNamed('/datascreen');
+          },
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
