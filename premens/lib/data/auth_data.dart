@@ -3,6 +3,12 @@ class UserData {
 
   String user = '';
   String password = '';
+
+  Map<String, String> toJson() {
+    Map<String, String> data = {'username': user, 'password': password};
+
+    return data;
+  }
 }
 
 class AuthData {

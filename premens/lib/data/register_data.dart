@@ -8,4 +8,10 @@ class RegisterData {
     user = '';
     password = '';
   }
+
+  Map<String, String> toJson() {
+    Map<String, String> data = {'username': user, 'password': password};
+
+    return data;
+  }
 }
