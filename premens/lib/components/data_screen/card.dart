@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'package:premens/components/data_screen/label.dart';
-import 'package:premens/data/premens_data.dart';
 
 class DataCard extends StatelessWidget {
-  final PremensData data;
-
-  const DataCard({super.key, required this.data});
+  const DataCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,18 +28,10 @@ class DataCard extends StatelessWidget {
         Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Center(
-                  child: DataLabel(
-                      text: 'Status:',
-                      value: data.isPressing ? 'Pressionando' : 'Parada')),
-              Center(
-                  child: DataLabel(
-                      text: 'Tempo Total:', value: data.totalTime.toString())),
-              Center(
-                  child: DataLabel(
-                      text: 'Tempo de Conclusão:',
-                      value: data.remainingTime.toString()))
+            children: const <Widget>[
+              Center(child: StatusLabel()),
+              Center(child: TotalTimeLabel()),
+              Center(child: RemainingTimeLabel())
             ])
       ]),
     );

@@ -1,21 +1,61 @@
 import 'package:flutter/material.dart';
 
-class DataLabel extends StatefulWidget {
+import 'package:premens/controller/app_controller.dart';
+
+class StatusLabel extends StatelessWidget {
+  const StatusLabel({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: AppController.instance,
+      builder: (BuildContext context, Widget? child) {
+        return DataLabel(
+            text: 'Status:',
+            value:
+                AppController.instance.isPressing ? 'Pressionando' : 'Parado');
+      },
+    );
+  }
+}
+
+class TotalTimeLabel extends StatelessWidget {
+  const TotalTimeLabel({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: AppController.instance,
+      builder: (BuildContext context, Widget? child) {
+        return DataLabel(
+            text: 'Tempo Total:',
+            value: AppController.instance.totalTime.toString());
+      },
+    );
+  }
+}
+
+class RemainingTimeLabel extends StatelessWidget {
+  const RemainingTimeLabel({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: AppController.instance,
+      builder: (BuildContext context, Widget? child) {
+        return DataLabel(
+            text: 'Tempo de Conclusão:',
+            value: AppController.instance.remainingTime.toString());
+      },
+    );
+  }
+}
+
+class DataLabel extends StatelessWidget {
   final String text;
   final String value;
 
   const DataLabel({super.key, required this.text, required this.value});
-
-  @override
-  // ignore: no_logic_in_create_state
-  State<DataLabel> createState() => _DataLabelState(text, value);
-}
-
-class _DataLabelState extends State<DataLabel> {
-  final String text;
-  final String value;
-
-  _DataLabelState(this.text, this.value);
 
   @override
   Widget build(BuildContext context) {

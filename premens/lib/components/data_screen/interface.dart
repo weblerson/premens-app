@@ -7,6 +7,8 @@ import 'package:premens/components/data_screen/card.dart';
 import 'package:premens/data/auth_data.dart';
 import 'package:premens/data/premens_data.dart';
 
+import 'package:premens/controller/app_controller.dart';
+
 class DataInterface extends StatefulWidget {
   const DataInterface({super.key});
 
@@ -15,8 +17,6 @@ class DataInterface extends StatefulWidget {
 }
 
 class _DataInterfaceState extends State<DataInterface> {
-  PremensData premensData = PremensData();
-
   @override
   void initState() {
     super.initState();
@@ -27,22 +27,16 @@ class _DataInterfaceState extends State<DataInterface> {
     DatabaseReference ref = FirebaseDatabase.instance.ref(
         '${AuthData.instance.uniqueId}/${AuthData.instance.user}/${AuthData.instance.token}');
 
-    // setState(() {
-    //   final data = ref.child('').get();
-    //   PremensData.instance.fromJson(data as Map<String, dynamic>);
-
-    //   print(
-    //       'Tempo: ${PremensData.instance.pressingTime}; Prensando: ${PremensData.instance.isPressing}');
-    // });
-
     ref.onValue.listen((DatabaseEvent event) {
-      setState(() {
-        final data = event.snapshot.value;
-        premensData = PremensData.fromJson(data as Map<String, dynamic>);
-        // PremensData.instance.fromJson(data as Map<String, dynamic>);
+      final data = event.snapshot.value as Map;
 
-        print(data);
-      });
+      PremensData premensData = PremensData();
+
+      premensData.isPressing = data['ligado'] as bool;
+      premensData.remainingTime = data['restante'] as int;
+      premensData.totalTime = data['tempo'] as int;
+
+      AppController.instance.changeLabels(premensData);
     });
   }
 
@@ -53,7 +47,7 @@ class _DataInterfaceState extends State<DataInterface> {
           padding: EdgeInsets.only(
               bottom: MediaQuery.of(context).size.height * 0.1,
               top: MediaQuery.of(context).size.height * 0.15),
-          child: DataCard(data: premensData))
+          child: const DataCard())
     ]);
   }
 }
