@@ -14,7 +14,7 @@ class DataCard extends StatelessWidget {
           color: const Color(0xFFD9D9D9),
           borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(50.0), topRight: Radius.circular(50.0)),
-          boxShadow: [
+          boxShadow: <BoxShadow>[
             BoxShadow(
                 color: Colors.black.withOpacity(0.25),
                 spreadRadius: 3.0,
@@ -23,7 +23,9 @@ class DataCard extends StatelessWidget {
           ]),
       child: Stack(children: <Widget>[
         Center(
-          child: Image.asset('assets/images/prensa_dados.png'),
+          child: Opacity(
+              opacity: 0.2,
+              child: Image.asset('assets/images/prensa_dados.png')),
         ),
         Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
