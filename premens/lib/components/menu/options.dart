@@ -21,7 +21,7 @@ class Options extends StatelessWidget {
             label: 'Visualizar Dados'),
         VerticalPadding(height: 20.0),
         MenuButton(
-            route: '/datascreen',
+            route: '/controlsscreen',
             imagePath: 'assets/images/manu_icon.png',
             label: 'Visualizar Controles')
       ],

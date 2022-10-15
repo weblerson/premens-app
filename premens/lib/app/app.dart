@@ -5,6 +5,7 @@ import 'package:premens/screens/auth.dart';
 import 'package:premens/screens/register.dart';
 import 'package:premens/screens/menu.dart';
 import 'package:premens/screens/data_screen.dart';
+import 'package:premens/screens/controls.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -21,7 +22,8 @@ class App extends StatelessWidget {
         '/auth': (context) => const Auth(),
         '/register': (context) => const Register(),
         '/menu': (context) => const Menu(),
-        '/datascreen': (context) => const DataScreen()
+        '/datascreen': (context) => const DataScreen(),
+        '/controlsscreen': (context) => const ControlsScreen()
       },
       initialRoute: '/splash',
     );
