@@ -15,7 +15,7 @@ class ControlsBG extends StatelessWidget {
         decoration: BoxDecoration(color: blueColor),
         child: Center(
             child: Opacity(
-                opacity: 0.25,
+                opacity: 0.2,
                 child: Image.asset('assets/images/prensa_dados.png'))),
       ),
       Container(

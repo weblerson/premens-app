@@ -70,6 +70,9 @@ flutter:
     - assets/images/importar_icon.png
     - assets/images/manu_icon.png
     - assets/images/prensa_menu.png
+    - assets/images/arrow_up.png
+    - assets/images/arrow_down.png
+    - assets/images/bi_arrow.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
