@@ -21,9 +21,9 @@ class Options extends StatelessWidget {
             label: 'Visualizar Dados'),
         VerticalPadding(height: 20.0),
         MenuButton(
-            route: '/controlsscreen',
+            route: 'modal',
             imagePath: 'assets/images/manu_icon.png',
-            label: 'Visualizar Controles')
+            label: 'Controle de Produção')
       ],
     );
   }

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
+
+import 'package:premens/screens/prod_control_modal.dart';
 
 class MenuButton extends StatelessWidget {
   final Color bgButton = const Color(0xFF134358);
@@ -17,7 +20,18 @@ class MenuButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigator.of(context).pushNamed(route),
+      onTap: () {
+        if (route != 'modal') {
+          Navigator.of(context).pushNamed(route);
+
+          return;
+        }
+
+        showBarModalBottomSheet(
+            context: context, builder: (context) => const ProdControlModel());
+
+        return;
+      },
       child: Container(
         width: MediaQuery.of(context).size.width * 0.6,
         height: 40.0,
