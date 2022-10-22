@@ -15,5 +15,26 @@ class AppController extends ChangeNotifier {
     remainingTime = data.remainingTime;
 
     notifyListeners();
+
+    return;
+  }
+}
+
+class MassController extends ChangeNotifier {
+  double massRequired = 0;
+  double massNeedful = 0;
+
+  static MassController instance = MassController();
+
+  void updateMass() {
+    '''
+    Para cada tonelada de mandioca -> 200kg de farinha
+    ''';
+
+    massNeedful = 5 * massRequired;
+
+    notifyListeners();
+
+    return;
   }
 }

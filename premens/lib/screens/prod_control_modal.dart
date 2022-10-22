@@ -2,68 +2,32 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-class ProdControlModel extends StatefulWidget {
-  const ProdControlModel({super.key});
+import 'package:premens/components/prod_control/prod_control_bg.dart';
+import 'package:premens/components/prod_control/prod_control_form.dart';
 
-  @override
-  State<ProdControlModel> createState() => _ProdControlModelState();
-}
+class ProdControlModal extends StatelessWidget {
+  final Color titleColor = const Color(0xFF134358);
 
-class _ProdControlModelState extends State<ProdControlModel> {
-  double inputBorderRadius = 10.0;
+  const ProdControlModal({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        Container(
-          height: MediaQuery.of(context).size.height * .4,
-          decoration: BoxDecoration(
-            color: const Color(0xFFD9D9D9).withOpacity(.5),
+    return SizedBox(
+        height: MediaQuery.of(context).size.height * .6,
+        child: Stack(children: <Widget>[
+          const ProdControlBg(),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 20.0),
+            child: Align(
+              alignment: Alignment.topCenter,
+              child: Text('Painel de Controle',
+                  style: TextStyle(
+                      color: titleColor,
+                      fontSize: 26.0,
+                      fontWeight: FontWeight.bold)),
+            ),
           ),
-          child: BackdropFilter(
-              filter: ImageFilter.blur(sigmaX: 25.0, sigmaY: 25.0)),
-        ),
-        const Padding(
-          padding: EdgeInsets.symmetric(vertical: 10.0),
-          child: Text('Painel de Controle',
-              style: TextStyle(
-                fontSize: 26.0,
-                fontWeight: FontWeight.bold,
-                color: Color(0xFF134358),
-              ),
-              textAlign: TextAlign.center),
-        ),
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                const Text('Quantidade Esperada',
-                    style: TextStyle(
-                        fontSize: 24.0,
-                        color: Color(0xFF134358),
-                        fontWeight: FontWeight.bold)),
-                BackdropFilter(
-                  filter: ImageFilter.blur(sigmaX: 15.0, sigmaY: 15.0),
-                  child: SizedBox(
-                    width: 100.0,
-                    child: TextField(
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(inputBorderRadius))),
-                          fillColor: const Color(0xFF15566A).withOpacity(.55)),
-                    ),
-                  ),
-                )
-              ],
-            )
-          ],
-        )
-      ],
-    );
+          const Center(child: ProdControlForm())
+        ]));
   }
 }

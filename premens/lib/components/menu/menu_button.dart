@@ -28,7 +28,7 @@ class MenuButton extends StatelessWidget {
         }
 
         showBarModalBottomSheet(
-            context: context, builder: (context) => const ProdControlModel());
+            context: context, builder: (context) => const ProdControlModal());
 
         return;
       },
