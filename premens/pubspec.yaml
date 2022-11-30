@@ -40,6 +40,22 @@ dependencies:
   firebase_database: ^9.1.5
   http: ^0.13.5
   modal_bottom_sheet: ^2.1.2
+  flutter_launcher_icons: ^0.11.0
+  flutter_native_splash: ^2.2.16
+
+flutter_native_splash:
+  color: "#041c6c"
+  image: "assets/app/splash.jpg"
+  android: true
+  ios: true
+
+flutter_icons:
+  image_path: "assets/app/icon-bgr.png"
+  ios: true
+  remove_alpha_ios: true
+  android: "launcher_icon"
+  adaptative_icon_background: "#041c6c"
+  adaptative_icon_foreground: "assets/app/icon-bgr.png"
 
 dev_dependencies:
   flutter_test:
